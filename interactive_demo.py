@@ -55,6 +55,7 @@ if __name__ in "__main__":
 
     # general setup
     torch.set_grad_enabled(False)
+
     if torch.cuda.is_available():
         device = 'cuda'
     elif torch.backends.mps.is_available():

@@ -11,7 +11,7 @@ from PySide6.QtWidgets import (QWidget, QComboBox, QCheckBox, QHBoxLayout, QLabe
 from PySide6.QtGui import (QKeySequence, QShortcut, QTextCursor, QImage, QPixmap, QIcon)
 from PySide6.QtCore import Qt, QTimer
 
-from cutie.utils.palette import davis_palette_np
+from cutie.utils.palette import custom_palette_np, custom_names
 from gui.gui_utils import *
 
 
@@ -475,10 +475,10 @@ class GUI(QWidget):
         return file_name
 
     def set_object_color(self, object_id: int):
-        r, g, b = davis_palette_np[object_id]
+        r, g, b = custom_palette_np[object_id]
         rgb = f'rgb({r},{g},{b})'
         self.object_color.setStyleSheet('QLabel {background: ' + rgb + ';}')
-        self.object_color.setText(f'{object_id}')
+        self.object_color.setText(f'{custom_names[object_id]}')
 
     def progressbar_update(self, progress: float):
         self.progressbar.setValue(int(progress * 100))

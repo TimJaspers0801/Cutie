@@ -14,7 +14,7 @@ if not hasattr(Image, 'Resampling'):  # Pillow<9.0
     Image.Resampling = Image
 import numpy as np
 
-from cutie.utils.palette import davis_palette
+from cutie.utils.palette import custom_palette
 from tqdm import tqdm
 
 log = logging.getLogger()
@@ -59,7 +59,7 @@ class ResourceManager:
         video = cfg['video']
         self.workspace = cfg['workspace']
         self.max_size = cfg['max_overall_size']
-        self.palette = davis_palette
+        self.palette = custom_palette
 
         # create temporary workspace if not specified
         if self.workspace is None:
