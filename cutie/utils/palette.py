@@ -47,6 +47,7 @@ color_palette = {
     35: (255, 255, 100), # Nerves - Yellow
 
     # Non-anatomical structures
+    98: (150, 150, 150),  # Firefly - Gray
     99: (50, 50, 50),    # Non anatomical structures - Dark Gray
     100: (0, 0, 0),      # Excluded frames - Black
 }
@@ -87,6 +88,7 @@ custom_names = {
     33: "V azygos",
     34: "Thoracic duct",
     35: "Nerves",
+    98: "Firefly",
     99: "Non anatomical structures",
     100: "Excluded frames"
 }
