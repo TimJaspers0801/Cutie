@@ -47,9 +47,9 @@ color_palette = {
     35: (255, 255, 100), # Nerves - Yellow
 
     # Non-anatomical structures
-    98: (150, 150, 150),  # Firefly - Gray
-    99: (50, 50, 50),    # Non anatomical structures - Dark Gray
-    100: (0, 0, 0),      # Excluded frames - Black
+    36: (150, 150, 150),  # Firefly - Gray
+    37: (50, 50, 50),    # Non anatomical structures - Dark Gray
+    38: (0, 0, 0),      # Excluded frames - Black
 }
 
 custom_names = {
