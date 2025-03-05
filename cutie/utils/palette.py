@@ -88,9 +88,9 @@ custom_names = {
     33: "V azygos",
     34: "Thoracic duct",
     35: "Nerves",
-    98: "Firefly",
-    99: "Non anatomical structures",
-    100: "Excluded frames"
+    36: "Firefly",
+    37: "Non anatomical structures",
+    38: "Excluded frames"
 }
 
 custom_palette_np = np.array([color_palette.get(i, (0, 0, 0)) for i in range(101)])
