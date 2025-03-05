@@ -26,31 +26,32 @@ color_palette = {
     16: (255, 150, 50),  # Hepatic ligament - Orange
     17: (255, 220, 200), # Cystic plate - Light Pink
     18: (200, 100, 200), # Stomach - Light Purple
-    19: (200, 0, 200),   # Spleen - Purple
-    20: (255, 0, 150),   # Uterus - Pink
-    21: (255, 100, 200), # Ovary - Light Pink
-    22: (200, 100, 255), # Oviduct - Lavender
-    23: (150, 0, 100),   # Prostate - Dark Purple
-    24: (255, 200, 255), # Urethra - Light Pink
-    25: (150, 100, 50),  # Ligated plexus - Brown
-    26: (200, 0, 150),   # Seminal vesicles - Magenta
-    27: (100, 100, 100), # Catheter - Gray
-    28: (255, 150, 255), # Bladder - Light Purple
-    29: (100, 200, 255), # Kidney - Light Blue
+    19: (144, 238, 144), # Ductus choledochus - Light Green
+    20: (200, 0, 200),   # Spleen - Purple
+    21: (255, 0, 150),   # Uterus - Pink
+    22: (255, 100, 200), # Ovary - Light Pink
+    23: (200, 100, 255), # Oviduct - Lavender
+    24: (150, 0, 100),   # Prostate - Dark Purple
+    25: (255, 200, 255), # Urethra - Light Pink
+    26: (150, 100, 50),  # Ligated plexus - Brown
+    27: (200, 0, 150),   # Seminal vesicles - Magenta
+    28: (100, 100, 100), # Catheter - Gray
+    29: (255, 150, 255), # Bladder - Light Purple
+    30: (100, 200, 255), # Kidney - Light Blue
 
     # Thorax IDs
-    30: (150, 200, 255), # Lung - Light Blue
-    31: (0, 150, 255),   # Airway (bronchus/trachea) - Sky Blue
-    32: (255, 100, 100), # Esophagus - Salmon
-    33: (200, 200, 255), # Pericardium - Pale Blue
-    34: (100, 100, 255), # V azygos - Blue
-    35: (0, 255, 150),   # Thoracic duct - Green Cyan
-    36: (255, 255, 100), # Nerves - Yellow
+    31: (150, 200, 255), # Lung - Light Blue
+    32: (0, 150, 255),   # Airway (bronchus/trachea) - Sky Blue
+    33: (255, 100, 100), # Esophagus - Salmon
+    34: (200, 200, 255), # Pericardium - Pale Blue
+    35: (100, 100, 255), # V azygos - Blue
+    36: (0, 255, 150),   # Thoracic duct - Green Cyan
+    37: (255, 255, 100), # Nerves - Yellow
 
     # Non-anatomical structures
-    37: (150, 150, 150),  # Firefly - Gray
-    38: (50, 50, 50),     # Non anatomical structures - Dark Gray
-    39: (0, 0, 0),       # Excluded frames - Black
+    38: (150, 150, 150),  # Firefly - Gray
+    39: (50, 50, 50),     # Non anatomical structures - Dark Gray
+    40: (0, 0, 0),       # Excluded frames - Black
 }
 
 custom_names = {
@@ -72,27 +73,28 @@ custom_names = {
     16: "Hepatic ligament",
     17: "Cystic plate",
     18: "Stomach",
-    19: "Spleen",
-    20: "Uterus",
-    21: "Ovary",
-    22: "Oviduct",
-    23: "Prostate",
-    24: "Urethra",
-    25: "Ligated plexus",
-    26: "Seminal vesicles",
-    27: "Catheter",
-    28: "Bladder",
-    29: "Kidney",
-    30: "Lung",
-    31: "Airway (bronchus/trachea)",
-    32: "Esophagus",
-    33: "Pericardium",
-    34: "V azygos",
-    35: "Thoracic duct",
-    36: "Nerves",
-    37: "Firefly",
-    38: "Non anatomical structures",
-    39: "Excluded frames"
+    19: "Ductus choledochus",
+    20: "Spleen",
+    21: "Uterus",
+    22: "Ovary",
+    23: "Oviduct",
+    24: "Prostate",
+    25: "Urethra",
+    26: "Ligated plexus",
+    27: "Seminal vesicles",
+    28: "Catheter",
+    29: "Bladder",
+    30: "Kidney",
+    31: "Lung",
+    32: "Airway (bronchus/trachea)",
+    33: "Esophagus",
+    34: "Pericardium",
+    35: "V azygos",
+    36: "Thoracic duct",
+    37: "Nerves",
+    38: "Firefly",
+    39: "Non anatomical structures",
+    40: "Excluded frames"
 }
 
 custom_palette_np = np.array([color_palette.get(i, (0, 0, 0)) for i in range(101)])
