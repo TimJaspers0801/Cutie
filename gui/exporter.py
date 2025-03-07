@@ -14,6 +14,7 @@ def convert_frames_to_video(
         bitrate: int = 1,  # in Mbps
         progress_callback=None) -> None:
     images = [img for img in sorted(os.listdir(image_folder)) if img.endswith(".jpg")]
+    print(image_folder, len(images))
     frame = cv2.imread(os.path.join(image_folder, images[0]))
     height, width, layers = frame.shape
 
