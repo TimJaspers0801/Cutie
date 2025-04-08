@@ -7,14 +7,17 @@
 #SBATCH --time=3:00:00
 
 
-# Set a custom path where you have more disk space (e.g., on /scratch)
-export MY_TMP_DIR=/gpfs/home1/tjaspers2/Cutie/temp/
-mkdir -p "$MY_TMP_DIR"
+# Setup scratch-based cache/temp dirs
+export CACHE_ROOT=/scratch/$USER/apptainer_cache
+export APPTAINER_CACHEDIR=$CACHE_ROOT
+export APPTAINER_TMPDIR=$CACHE_ROOT/tmp
+export TMPDIR=$CACHE_ROOT/tmp
 
-# Set Apptainer/Singularity temp and cache directories
-export APPTAINER_TMPDIR="$MY_TMP_DIR"
-export APPTAINER_CACHEDIR="$MY_TMP_DIR"
-export TMPDIR="$MY_TMP_DIR"  # Some tools still use this
+mkdir -p "$APPTAINER_CACHEDIR" "$APPTAINER_TMPDIR"
+
+# Clean out anything left from a previous failed pull
+rm -rf "$APPTAINER_CACHEDIR"/*
+
 
 
 # Pull container from dockerhub
