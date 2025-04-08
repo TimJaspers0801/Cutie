@@ -7,15 +7,7 @@
 #SBATCH --time=3:00:00
 
 
-# Setup scratch-based cache/temp dirs
-export CACHE_ROOT=$HOME/temp
-export APPTAINER_CACHEDIR=$CACHE_ROOT
-export APPTAINER_TMPDIR=$CACHE_ROOT/tmp
-export TMPDIR=$CACHE_ROOT/tmp
 
-mkdir -p "$APPTAINER_TMPDIR"
-
-
-
+APPTAINER_CACHEDIR=/gpfs/home1/tjaspers2/Cutie/temp/
 # Pull container from dockerhub
 apptainer pull container.sif docker://tjmjaspers/cutie:v1
