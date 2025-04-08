@@ -8,6 +8,7 @@
 
 
 
+export APPTAINER_TMPDIR=/gpfs/home1/tjaspers2/Cutie/temp/
 
 # Pull container from dockerhub
-apptainer pull container.sif docker://tjmjaspers/cutie:v1 $APPTAINER_TMPDIR=/gpfs/home1/tjaspers2/Cutie/temp/
+apptainer pull container.sif docker://tjmjaspers/cutie:v1
