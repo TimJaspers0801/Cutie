@@ -155,11 +155,11 @@ def move_files(video_set, img_dest, mask_dest, pickle_dest):
         for filename in video_groups[video]:
             img_src = os.path.join(images_dir, filename)
             mask_src = os.path.join(masks_dir, filename.replace('.jpg', '.png'))
-            pickle_src = os.path.join(pickle_dir, filename.replace('.png', '.pickle'))
+            pickle_src = os.path.join(pickle_dir, filename.replace('.jpg', '.pickle'))
 
             img_dst = os.path.join(img_dest, filename)
             mask_dst = os.path.join(mask_dest, filename.replace('.jpg', '.png'))
-            pickle_dst = os.path.join(pickle_dest, filename.replace('.png', '.pickle'))
+            pickle_dst = os.path.join(pickle_dest, filename.replace('.jpg', '.pickle'))
 
             shutil.copy(img_src, img_dst)
             if os.path.exists(mask_src):

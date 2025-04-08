@@ -7,12 +7,12 @@ import pickle
 # to avoid compatibility issues (often numpy errors like missing numpy.core module)
 
 # # Validation
-mask_folder_path = r'E:\SurgeSAM_finetuning_ritm\val\pickles'
-pickle_file_path = r'E:\SurgeSAM_finetuning_ritm\val\hannotation.pickle'
+# mask_folder_path = r'E:\SurgeSAM_finetuning_ritm\val\masks'
+# pickle_file_path = r'E:\SurgeSAM_finetuning_ritm\val\hannotation.pickle'
 
 # Train
-# mask_folder_path = r'E:\SurgeSAM_finetuning_ritm\train\pickles'
-# pickle_file_path = r'E:\SurgeSAM_finetuning_ritm\train\hannotation.pickle'
+mask_folder_path = r'E:\SurgeSAM_finetuning_ritm\train\masks'
+pickle_file_path = r'E:\SurgeSAM_finetuning_ritm\train\hannotation.pickle'
 
 # # Test
 # mask_folder_path = r'G:\datasets\RAMIE_879_RITM\Test\masks'
