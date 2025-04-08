@@ -65,8 +65,8 @@ vos_datasets:
 
 
   SurgeSAM:
-    image_directory: /gpfs/work5/0/prjs0797/Ronald/RAMIE_879_video_15s/images/ #juist locatie toevoegen
-    mask_directory: /gpfs/work5/0/prjs0797/Ronald/RAMIE_879_video_15s/masks/ # juiste locatie toevoegen
+    image_directory: /gpfs/home1/tjaspers2/SurgeSAM/images/ #juist locatie toevoegen
+    mask_directory: /gpfs/home1/tjaspers2/SurgeSAM/masks/ # juiste locatie toevoegen
     multiplier: 1
     frame_interval: 1
     subset: null
