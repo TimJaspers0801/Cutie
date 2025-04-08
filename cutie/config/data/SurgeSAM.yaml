@@ -13,5 +13,5 @@ pre_training:
 main_training:
   datasets:
     - SurgeSAM
-  num_iterations: 125000
+  num_iterations: 12500
   lr_schedule_steps: [100000, 115000]
