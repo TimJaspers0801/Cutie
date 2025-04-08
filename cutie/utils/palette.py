@@ -17,7 +17,7 @@ color_palette = {
     7: (200, 150, 100),  # Abdominal wall - Beige
     8: (250, 150, 100),  # Diaphragm - light Beige
     9: (255, 200, 100),  # Omentum - Light Orange
-    10: (180, 0, 0),      # Aorta - Dark Red
+    10: (180, 0, 0),     # Aorta - Dark Red
     11: (0, 0, 180),     # Vena cava - Dark Blue
     12: (150, 100, 50),  # Liver - Brown
     13: (0, 255, 255),   # Cystic duct - Cyan
@@ -35,7 +35,7 @@ color_palette = {
     25: (200, 100, 255), # Oviduct - Lavender
     26: (150, 0, 100),   # Prostate - Dark Purple
     27: (255, 200, 255), # Urethra - Light Pink
-    28: (150, 100, 50),  # Ligated plexus - Brown
+    28: (150, 100, 75),  # Ligated plexus - Brown
     29: (200, 0, 150),   # Seminal vesicles - Magenta
     30: (100, 100, 100), # Catheter - Gray
     31: (255, 150, 255), # Bladder - Light Purple

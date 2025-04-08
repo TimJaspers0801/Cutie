@@ -62,3 +62,12 @@ vos_datasets:
     frame_interval: 3
     subset: null
     empty_masks: ./cutie/utils/subsets/ovis_empty_masks.txt
+
+
+  SurgeSAM:
+    image_directory: /gpfs/work5/0/prjs0797/Ronald/RAMIE_879_video_15s/images/ #juist locatie toevoegen
+    mask_directory: /gpfs/work5/0/prjs0797/Ronald/RAMIE_879_video_15s/masks/ # juiste locatie toevoegen
+    multiplier: 1
+    frame_interval: 1
+    subset: null
+    empty_masks: null
