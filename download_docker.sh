@@ -10,6 +10,9 @@
 export APPTAINER_TMPDIR=/gpfs/home1/tjaspers2/Cutie/temp/
 export APPTAINER_CACHEDIR=/gpfs/home1/tjaspers2/Cutie/temp/
 
+# Make sure the directory exists
+mkdir -p "$APPTAINER_TMPDIR"
+mkdir -p "$APPTAINER_CACHEDIR"
 
 # Pull container from dockerhub
 apptainer pull container.sif docker://tjmjaspers/cutie:v1
