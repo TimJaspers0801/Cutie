@@ -8,15 +8,12 @@
 
 
 # Setup scratch-based cache/temp dirs
-export CACHE_ROOT=/scratch/$USER/apptainer_cache
+export CACHE_ROOT=$HOME/temp
 export APPTAINER_CACHEDIR=$CACHE_ROOT
 export APPTAINER_TMPDIR=$CACHE_ROOT/tmp
 export TMPDIR=$CACHE_ROOT/tmp
 
-mkdir -p "$APPTAINER_CACHEDIR" "$APPTAINER_TMPDIR"
-
-# Clean out anything left from a previous failed pull
-rm -rf "$APPTAINER_CACHEDIR"/*
+mkdir -p "$APPTAINER_TMPDIR"
 
 
 
