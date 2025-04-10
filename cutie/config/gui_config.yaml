@@ -9,8 +9,8 @@ mask_endpoint: masks
 vis_endpoint: vis
 
 amp: True
-weights: weights/RAMIE_24_IT11600_l133.pth
-ritm_weights: weights/coco_lvis_h18_itermask_finetuned_ep90_includingtest.pth
+weights: weights/cutie-surgesam-0001.pth
+ritm_weights: weights/ritm-surgesam-0001.pth
 
 # All "size" parameters represent the length of the shorter edge
 # maximum internal processing size; reducing this speeds up processing

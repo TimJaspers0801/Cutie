@@ -74,7 +74,7 @@ if __name__ in "__main__":
 
     # start everything
     app = QApplication(sys.argv)
-    qdarktheme.setup_theme("auto")
+    app.setStyleSheet(qdarktheme.load_stylesheet())    #qdarktheme.setup_theme("auto")
     ex = MainController(cfg)
     if 'workspace_init_only' in cfg and cfg['workspace_init_only']:
         sys.exit(0)
