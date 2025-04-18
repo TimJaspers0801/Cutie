@@ -123,8 +123,8 @@ def analyze_video_properties(input_root):
         print("No valid resolution data found.")
 
 # Specify the root directory of your dataset
-input_root = "E:\SurgeNet_videos_selected"
-output_root = "E:\SurgeSAM"
+input_root = r"E:\SurgeNet_videos_selected\gastrojejunostomy"
+output_root = "E:\SurgeSAM\gastrojejunostomy"
 os.makedirs(output_root, exist_ok=True)
 process_videos(input_root, output_root)
 

@@ -58,7 +58,7 @@ class DeepLabV3Plus(nn.Module):
 
     def load_pretrained_weights(self):
         pretrained = ResNetBackbone(backbone=self.backbone_name,
-                                    pretrained_base=True,
+                                    pretrained_base=False,
                                     norm_layer=self.backbone_norm_layer,
                                     **self._kwargs)
         backbone_state_dict = self.backbone.state_dict()

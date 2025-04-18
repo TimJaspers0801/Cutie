@@ -229,7 +229,7 @@ def resnet34_v1b(pretrained=False, **kwargs):
     if pretrained:
         model_dict = model.state_dict()
         filtered_orig_dict = _safe_state_dict_filtering(
-            torch.hub.load(GLUON_RESNET_TORCH_HUB, 'gluon_resnet34_v1b', pretrained=True).state_dict(),
+            torch.hub.load(GLUON_RESNET_TORCH_HUB, 'gluon_resnet34_v1b', pretrained=False).state_dict(),
             model_dict.keys()
         )
         model_dict.update(filtered_orig_dict)
@@ -242,7 +242,7 @@ def resnet50_v1s(pretrained=False, **kwargs):
     if pretrained:
         model_dict = model.state_dict()
         filtered_orig_dict = _safe_state_dict_filtering(
-            torch.hub.load(GLUON_RESNET_TORCH_HUB, 'gluon_resnet50_v1s', pretrained=True).state_dict(),
+            torch.hub.load(GLUON_RESNET_TORCH_HUB, 'gluon_resnet50_v1s', pretrained=False).state_dict(),
             model_dict.keys()
         )
         model_dict.update(filtered_orig_dict)
@@ -255,7 +255,7 @@ def resnet101_v1s(pretrained=False, **kwargs):
     if pretrained:
         model_dict = model.state_dict()
         filtered_orig_dict = _safe_state_dict_filtering(
-            torch.hub.load(GLUON_RESNET_TORCH_HUB, 'gluon_resnet101_v1s', pretrained=True).state_dict(),
+            torch.hub.load(GLUON_RESNET_TORCH_HUB, 'gluon_resnet101_v1s', pretrained=False).state_dict(),
             model_dict.keys()
         )
         model_dict.update(filtered_orig_dict)
@@ -268,7 +268,7 @@ def resnet152_v1s(pretrained=False, **kwargs):
     if pretrained:
         model_dict = model.state_dict()
         filtered_orig_dict = _safe_state_dict_filtering(
-            torch.hub.load(GLUON_RESNET_TORCH_HUB, 'gluon_resnet152_v1s', pretrained=True).state_dict(),
+            torch.hub.load(GLUON_RESNET_TORCH_HUB, 'gluon_resnet152_v1s', pretrained=False).state_dict(),
             model_dict.keys()
         )
         model_dict.update(filtered_orig_dict)

@@ -140,23 +140,24 @@ color_palette = {
     25: (200, 100, 255),  # Oviduct - Lavender
     26: (150, 0, 100),  # Prostate - Dark Purple
     27: (255, 200, 255),  # Urethra - Light Pink
-    # 28: (150, 100, 75),  # Ligated plexus - Brown
-    # 29: (200, 0, 150),  # Seminal vesicles - Magenta
-    # 30: (100, 100, 100),  # Catheter - Gray
-    # 31: (255, 150, 255),  # Bladder - Light Purple
-    # 32: (100, 200, 255),  # Kidney - Light Blue
+    28: (150, 100, 75),  # Ligated plexus - Brown
+    29: (200, 0, 150),  # Seminal vesicles - Magenta
+    30: (100, 100, 100),  # Catheter - Gray
+    31: (255, 150, 255),  # Bladder - Light Purple
+    32: (100, 200, 255),  # Kidney - Light Blue
     # # Thorax IDs
-    # 33: (150, 200, 255),  # Lung - Light Blue
-    # 34: (0, 150, 255),  # Airway (bronchus/trachea) - Sky Blue
-    # 35: (255, 100, 100),  # Esophagus - Salmon
-    # 36: (200, 200, 255),  # Pericardium - Pale Blue
-    # 37: (100, 100, 255),  # V azygos - Blue
-    # 38: (0, 255, 150),  # Thoracic duct - Green Cyan
-    # 39: (255, 255, 100),  # Nerves - Yellow
-    # Non-anatomical structures
+    33: (150, 200, 255),  # Lung - Light Blue
+    34: (0, 150, 255),  # Airway (bronchus/trachea) - Sky Blue
+    35: (255, 100, 100),  # Esophagus - Salmon
+    36: (200, 200, 255),  # Pericardium - Pale Blue
+    37: (100, 100, 255),  # V azygos - Blue
+    38: (0, 255, 150),  # Thoracic duct - Green Cyan
+    39: (255, 255, 100),  # Nerves - Yellow
+    #Non-anatomical structures
     # 40: (150, 150, 150),  # Firefly - Gray
-    # 41: (50, 50, 50),  # Non anatomical structures - Dark Gray
+    41: (50, 50, 50),  # Non anatomical structures - Dark Gray
     # 42: (0, 0, 0),  # Excluded frames - Black
+    43: (173, 216, 230),  # Mesocolon - Light Blue 2
 }
 
 class_names = {
@@ -189,16 +190,20 @@ class_names = {
     27: "Urethra",
     28: "Ligated plexus",
     29: "Seminal vesicles",
-    # 30: "Catheter",
-    # 31: "Bladder",
-    # 32: "Kidney",
-    # 33: "Lung",
-    # 34: "Airway (bronchus/trachea)",
-    # 35: "Esophagus",
-    # 36: "Pericardium",
-    # 37: "V azygos",
-    # 38: "Thoracic duct",
-    # 39: "Nerves",
+    30: "Catheter",
+    31: "Bladder",
+    32: "Kidney",
+    33: "Lung",
+    34: "Airway (bronchus/trachea)",
+    35: "Esophagus",
+    36: "Pericardium",
+    37: "V azygos",
+    38: "Thoracic duct",
+    39: "Nerves",
+    # 40: "Firefly",
+    41: "Non anatomical structures",
+    # 42: "Excluded frames",
+    43: "Mesocolon",
 }
 
 # Remove non-anatomical classes (41, 42)
@@ -296,6 +301,7 @@ def plot_class_occurrences(class_pixel_counts, class_image_counts, class_clip_co
                      str(bar.get_width()), va='center', ha='left', fontsize=10)
 
         plt.tight_layout()
+        plt.savefig(os.path.join(r'E:\SurgeSAM_processed', f"{title.lower().replace(' ', '_')}_occurrences.png"))
         plt.show()
 
 
@@ -315,6 +321,6 @@ if __name__ == "__main__":
 
 
     # Per class statistics
-    # main_folder = "E:\SurgeSAM_processed"  # Replace with your dataset path
-    # class_pixel_counts, class_image_counts, class_clip_counts, class_video_counts = count_class_occurrences(main_folder)
-    # plot_class_occurrences(class_pixel_counts, class_image_counts, class_clip_counts, class_video_counts)
+    main_folder = "E:\SurgeSAM_processed"  # Replace with your dataset path
+    class_pixel_counts, class_image_counts, class_clip_counts, class_video_counts = count_class_occurrences(main_folder)
+    plot_class_occurrences(class_pixel_counts, class_image_counts, class_clip_counts, class_video_counts)

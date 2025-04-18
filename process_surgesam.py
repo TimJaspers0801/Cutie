@@ -42,13 +42,13 @@ def process_video_folder(video_path, new_video_path, color_palette):
     for i in tqdm.tqdm(range(len(mask_files)), total=len(mask_files),
                        desc=f"Processing {os.path.basename(video_path)}"):
         mask_file = mask_files[i]
-        frame_number = int(os.path.basename(mask_file).split('_')[-1].split('.')[0])
+        frame_number = os.path.basename(mask_file).split('_')[-1].split('.')[0]
 
         if os.path.exists(mask_file):
             frames_in_clip.append(frame_number)
 
             if i == len(mask_files) - 1 or int(
-                    os.path.basename(mask_files[i + 1]).split('_')[-1].split('.')[0]) != frame_number + 1:
+                    os.path.basename(mask_files[i + 1]).split('_')[-1].split('.')[0]) != int(frame_number) + 1:
                 # Create clip folders
                 clip_folder = os.path.join(new_video_path, f"clip_{current_clip:04d}")
                 images_clip_folder = os.path.join(clip_folder, "images")
@@ -60,9 +60,11 @@ def process_video_folder(video_path, new_video_path, color_palette):
 
                 # Copy images, masks, and create machine masks
                 for frame in frames_in_clip:
-                    img_file = os.path.join(images_path, f"frame_{frame:04d}.jpg")
-                    mask_file = os.path.join(masks_path, f"frame_{frame:04d}.png")
-                    machine_mask_file = os.path.join(machine_masks_folder, f"frame_{frame:04d}.png")
+                    # check if frame has 04 or 06 digits
+                    img_file = os.path.join(images_path, f"frame_{frame}.jpg")
+                    mask_file = os.path.join(masks_path, f"frame_{frame}.png")
+                    machine_mask_file = os.path.join(machine_masks_folder, f"frame_{frame}.png")
+
 
                     if os.path.exists(img_file):
                         shutil.copy(img_file, os.path.join(images_clip_folder, os.path.basename(img_file)))
@@ -94,11 +96,12 @@ color_palette = {
     26: (150, 0, 100), 27: (255, 200, 255), 28: (150, 100, 75), 29: (200, 0, 150), 30: (100, 100, 100),
     31: (255, 150, 255), 32: (100, 200, 255), 33: (150, 200, 255), 34: (0, 150, 255), 35: (255, 100, 100),
     36: (200, 200, 255), 37: (100, 100, 255), 38: (0, 255, 150), 39: (255, 255, 100), 40: (150, 150, 150),
-    41: (50, 50, 50), 255: (0, 0, 0)
+    41: (50, 50, 50), 43: (173, 216, 230), # Mesocolon - Light Blue 2
+    255: (0, 0, 0)
 }
 
 
 # Example usage
-main_folder = r"E:\SurgeSAM\colectomy"
-new_main_folder = r"E:\SurgeSAM_processed\colectomy"
+main_folder = r"E:\SurgeSAM\RARP"
+new_main_folder = r"E:\SurgeSAM_processed\RARP"
 process_dataset(main_folder, new_main_folder, color_palette)

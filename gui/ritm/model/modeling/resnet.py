@@ -3,7 +3,7 @@ from .resnetv1b import resnet34_v1b, resnet50_v1s, resnet101_v1s, resnet152_v1s
 
 
 class ResNetBackbone(torch.nn.Module):
-    def __init__(self, backbone='resnet50', pretrained_base=True, dilated=True, **kwargs):
+    def __init__(self, backbone='resnet50', pretrained_base=False, dilated=True, **kwargs):
         super(ResNetBackbone, self).__init__()
 
         if backbone == 'resnet34':

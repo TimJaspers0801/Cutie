@@ -33,6 +33,8 @@ color_palette = {
     23: (255, 0, 150),   # Uterus - Pink
     24: (255, 100, 200), # Ovary - Light Pink
     25: (200, 100, 255), # Oviduct - Lavender
+
+    # RARP
     26: (150, 0, 100),   # Prostate - Dark Purple
     27: (255, 200, 255), # Urethra - Light Pink
     28: (150, 100, 75),  # Ligated plexus - Brown
@@ -51,9 +53,12 @@ color_palette = {
     39: (255, 255, 100), # Nerves - Yellow
 
     # Non-anatomical structures
-    40: (150, 150, 150),  # Firefly - Gray
+    40: (150, 150, 150),  # Ureter - Gray
     41: (50, 50, 50),     # Non anatomical structures - Dark Gray
     42: (0, 0, 0),        # Excluded frames - Black
+
+    # Additional structures
+    43: (173, 216, 230), # Mesocolon - Light Blue 2
 }
 
 custom_names = {
@@ -96,9 +101,10 @@ custom_names = {
     37: "V azygos",
     38: "Thoracic duct",
     39: "Nerves",
-    40: "Firefly",
+    40: "Ureter",
     41: "Non anatomical structures",
-    42: "Excluded frames"
+    42: "Excluded frames",
+    43: "Mesocolon",
 }
 
 custom_palette_np = np.array([color_palette.get(i, (0, 0, 0)) for i in range(101)])
