@@ -1,3 +1,4 @@
+#!/bin/bash
 
 #SBATCH --nodes=1                                   # Specify the amount of A100 Nodes with 4 A100 GPUs (single GPU 128 SBUs/hour, 512 SBUs/hour for an entire node)
 #SBATCH --ntasks=1                                  # Specify the number of tasks
